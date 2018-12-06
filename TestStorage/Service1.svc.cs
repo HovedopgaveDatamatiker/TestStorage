@@ -76,9 +76,9 @@ namespace TestStorage
             command.Parameters.AddWithValue("@Id", reservation.Id);
             command.Parameters.AddWithValue("@Product", reservation.Product);
             command.Parameters.AddWithValue("@ScheduledDate", reservation.ScheduledDate);
-            //command.Parameters.AddWithValue("@IsInProduction", reservation.IsInProduction);
-            //command.Parameters.AddWithValue("@IsDone", reservation.IsDone);
-            "@",reservation.IsDone = "false";
+            command.Parameters.AddWithValue("@IsInProduction", reservation.IsInProduction);
+            command.Parameters.AddWithValue("@IsDone", reservation.IsDone);
+            //"@",reservation.IsDone = "false";
             command.ExecuteNonQuery(); //udfører SQL statement "command"
             conn.Close();
         }
